@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #3b82f6 0%, transparent 60%),
+    radial-gradient(1000px 500px at 90% 10%, #a855f7 0%, transparent 55%),
+    linear-gradient(180deg, #020617, #020617);
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 64px;
+  background: rgba(2, 6, 23, 0.6);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #93c5fd;
+  letter-spacing: 1px;
+}
+
+.navbar nav a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: #cbd5f5;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.navbar nav a:hover {
+  color: #ffffff;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: 100vh;
+  padding: 0 24px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.hero h2 {
+  margin-top: 12px;
+  font-size: 1.25rem;
+  color: #c7d2fe;
+  font-weight: 500;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 18px auto;
+  color: #cbd5f5;
+}
+
+.hero .sub {
+  font-size: 0.95rem;
+  color: #94a3b8;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 26px;
+  padding: 14px 30px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  color: #020617;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(96, 165, 250, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(96, 165, 250, 0.5);
+}
+
+.btn.outline {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e5e7eb;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: none;
+}
+
+.btn.outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.btn.small {
+  padding: 10px 18px;
+  font-size: 0.85rem;
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  padding: 100px 64px;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 50px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* ---------- GLASS CARD ---------- */
+.card {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 20px;
+  padding: 36px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ---------- INFO / PROJECT GRID ---------- */
+.info-grid,
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.info-card,
+.project-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  padding: 28px;
+  border-radius: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.info-card:hover,
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- TAGS ---------- */
+.tag-grid span,
+.tags span {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 8px 14px;
+  border-radius: 999px;
+  margin: 6px 6px 0 0;
+  font-size: 0.8rem;
+  color: #e0e7ff;
+}
+
+/* ---------- GALLERY ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.04);
+}
+
+/* ---------- ALIGN ---------- */
+.center {
+  text-align: center;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  padding: 48px 24px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+
+  .section {
+    padding: 80px 24px;
+  }
+
+  .navbar nav a {
+    margin-left: 16px;
+    font-size: 0.85rem;
+  }
+}
